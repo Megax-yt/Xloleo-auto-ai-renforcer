@@ -58,10 +58,10 @@ def main():
     model_folder = "model"
     model_file = "best.pt"
     clear()
-    display_threshold = 0.7#float(input("Enter the threshold to display a detection in decimal form: "))
-    log_threshold = 0.85#float(input("Enter the threshold to log a detection in decimal form: "))
-    log_min = 3#int(input("Enter the minimum amount of detections to trigger a log: "))
-    log_delay = 5#int(input("Enter how often it should log detections in seconds: "))
+    display_threshold = float(input("Enter the threshold to display a detection in decimal form: "))
+    log_threshold = float(input("Enter the threshold to log a detection in decimal form: "))
+    log_min = int(input("Enter the minimum amount of detections to trigger a log: "))
+    log_delay = int(input("Enter how often it should log detections in seconds: "))
     model_path = os.path.join(model_folder, model_file)
     detector = ObjectDetector(model_path, display_threshold)
     clear()
