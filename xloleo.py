@@ -38,9 +38,6 @@ def draw_boxes(frame, boxes):
     confanot = []
     for box in boxes:
         x1, y1, x2, y2, conf, cls = box
-        label = f"{conf * 100:.2f}%"
-        color = (0, 255, 0)  # Green
-        
         # Convert bounding box coordinates to YOLO format
         img_height, img_width, _ = frame.shape
         x_center = (x1 + x2) / (2 * img_width)
